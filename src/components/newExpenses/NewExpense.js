@@ -8,7 +8,7 @@ export default function NewExpense({addExpense}) {
       ...enterData,
       id : Math.random().toString()
     }
-    console.log(exp);
+    //console.log(exp);
     addExpense(exp);
   };
 

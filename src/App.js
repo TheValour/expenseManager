@@ -1,9 +1,10 @@
+import React from 'react'
 import "./App.css";
 import Expense  from "./components/expense/Expense";
-import NewExpense from "./newExpenses/NewExpense";
+import NewExpense from "./components/newExpenses/NewExpense";
 
 function App() {
-  const expense = [
+  const [expense, setExpense] = React.useState([
     {
       id: "e1",
       title: "Rent",
@@ -30,12 +31,39 @@ function App() {
       amount: 609.75,
       date: new Date(2023, 8, 1),
     },
-  ];
+  ])
 
-  const addExpense = exp =>{
-    console.log("In app.js");
-    console.log(exp);
-  }
+  // const addExpense = (exp) =>{
+  //   // console.log("In app.js");
+  //   // console.log(exp);
+  //   // const temp = {
+  //   //   id: exp.id,
+  //   //   title : exp.enterTitle,
+  //   //   amount : exp.enterAmount,
+  //   //   date  : exp.enterDate,
+  //   // };
+  //   // console.log(temp);
+  //   // setExpense((pre) => [...pre, temp]);
+  //   // setExpense(temp)
+  //   setExpense((pre) => {
+  //     return [exp, ...pre];
+  //   })
+  // }
+  const addExpense = (exp) => {
+    // const temp = {
+    //   id: exp.id,
+    //   title : exp.enterTitle,
+    //   amount : exp.enterAmount,
+    //   date  : exp.enterDate,
+    // };
+    console.log(exp.Date)
+    console.log(typeof(exp.enterDate))
+    console.log(typeof(expense[0].date));
+       setExpense((prevExpenses) => {
+      return [exp, ...prevExpenses];
+    });
+  };
+  
 
   return (
     <div className='App-header'>
