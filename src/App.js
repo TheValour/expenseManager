@@ -9,61 +9,35 @@ function App() {
       id: "e1",
       title: "Rent",
       amount: 800,
-      date: new Date(2023, 5, 1),
+      date: new Date(2022, 5, 1),
     },
 
     {
       id: "e2",
       title: "Groceries",
       amount: 55.5,
-      date: new Date(2023, 9, 2),
+      date: new Date(2022, 9, 2),
     },
 
     {
       id: "e3",
       title: "Phone Bill",
       amount: 60.75,
-      date: new Date(2023, 4, 3),
+      date: new Date(2021, 4, 3),
     },
     {
       id: "e4",
       title: "Movie Bill",
       amount: 609.75,
-      date: new Date(2023, 8, 1),
+      date: new Date(2019, 8, 1),
     },
   ])
 
-  // const addExpense = (exp) =>{
-  //   // console.log("In app.js");
-  //   // console.log(exp);
-  //   // const temp = {
-  //   //   id: exp.id,
-  //   //   title : exp.enterTitle,
-  //   //   amount : exp.enterAmount,
-  //   //   date  : exp.enterDate,
-  //   // };
-  //   // console.log(temp);
-  //   // setExpense((pre) => [...pre, temp]);
-  //   // setExpense(temp)
-  //   setExpense((pre) => {
-  //     return [exp, ...pre];
-  //   })
-  // }
   const addExpense = (exp) => {
-    // const temp = {
-    //   id: exp.id,
-    //   title : exp.enterTitle,
-    //   amount : exp.enterAmount,
-    //   date  : exp.enterDate,
-    // };
-    console.log(exp.Date)
-    console.log(typeof(exp.enterDate))
-    console.log(typeof(expense[0].date));
-       setExpense((prevExpenses) => {
+      setExpense((prevExpenses) => {
       return [exp, ...prevExpenses];
     });
   };
-  
 
   return (
     <div className='App-header'>
