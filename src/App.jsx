@@ -29,7 +29,7 @@ function App() {
       id: "e4",
       title: "Movie Bill",
       amount: 609.75,
-      date: new Date(2019, 8, 1),
+      date: new Date(2022, 8, 1),
     },
   ])
 
@@ -41,7 +41,6 @@ function App() {
 
   return (
     <div className='App-header'>
-      hello
       <NewExpense addExpense = {addExpense}/>
       <Expense expense={expense}/>
     </div>
